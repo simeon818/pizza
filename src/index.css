@@ -1,0 +1,196 @@
+* {
+  font-family: "IBM Plex Serif", serif;
+  font-size: small;
+}
+
+body {
+  margin: auto;
+}
+/* Main container that holds all pizza items */
+.pizza-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+  width: 80%;
+  margin: 2% auto;
+}
+
+.close {
+  font-size: 48px;
+
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.buttons {
+  display: flex;
+  gap: 5%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+/* Individual pizza item styling */
+
+.pizza-photo {
+  flex: 0 0 100px;
+  margin-right: 16px;
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow to crop image */
+}
+
+.pizza-photo img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Crop the image to fit the container */
+  border-radius: 8px;
+}
+
+.pizza-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pizza-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.pizza-info p {
+  margin: 4px 0;
+}
+.price {
+  font-size: 24px;
+}
+
+.delete-button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+/*////////////////////*/
+
+.close {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #808080;
+}
+
+.toggle-button {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: #808080;
+  color: #ddd;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 4px;
+}
+
+.toggle-button {
+}
+
+.toggle-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.new-style {
+  background-color: #272727;
+  color: white;
+}
+
+pizza-container.new-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+  width: 80%;
+  margin: 2% auto;
+  background-color: #272727;
+}
+.pizza-div.toggled-style {
+  background-color: #f28705; /* Change background */
+  color: white; /* Change text color */
+  border-color: #f28705; /* Change border color */
+}
+
+.pizza-div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .pizza-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pizza-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px;
+    position: absolute;
+  }
+
+  .pizza-info h3 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .toggle-button {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .delete-button {
+    padding: 6px;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 0;
+    bottom: 0%;
+  }
+
+  .pizza-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
